@@ -7,3 +7,29 @@
  
 
 /* Skriv en funktion currencyConverter(amount, currency) */
+// Växelkurser
+    const sekToUSD = 0.11;
+    const sekToEUR = 0.094; 
+
+
+// Deklarerar funktionen.           "USD" "EUR"
+function currencyConverter(amount, currency) {
+
+    let result;
+
+    if(currency === "EUR") {
+        result = amount * sekToEUR;
+        console.log(`${amount} SEK är ${result} €`);
+    } 
+    else if(currency === "USD") {
+        result = amount * sekToUSD;
+        console.log(`${amount} SEK är ${result} $`);
+    } else {
+        console.log("Currency not supported")
+    }
+
+}
+
+// Anropas funktion, man kör den
+currencyConverter(200000, "EUR");
+currencyConverter(100000, "USD");
